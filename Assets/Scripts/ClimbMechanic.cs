@@ -25,7 +25,7 @@ public class ClimbMechanic : MonoBehaviour
             Ray ray = cameraMain.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                Debug.Log("You selected the " + hit.transform.name); // ensure you picked right object
+                //Debug.Log("You selected the " + hit.transform.name); // ensure you picked right object
                 if (hit.transform.gameObject.tag == "Handle")
                 {
                     AttachHandle(hit);
@@ -45,14 +45,14 @@ public class ClimbMechanic : MonoBehaviour
             if (rightJoint != null)
             {
                // rightJoint.connectedBody = hit.transform.gameObject.GetComponent<Rigidbody>();
-                rightHand.transform.DOMove(hit.transform.position, 0.5f);
+                rightHand.transform.DOMove(hit.transform.position, 1f);
 
             }
             else
             {
              //   rightHand.AddComponent<FixedJoint>().connectedBody = hit.transform.gameObject.GetComponent<Rigidbody>();
                 rightJoint = rightHand.GetComponent<FixedJoint>();
-                rightHand.transform.DOMove(hit.transform.position, 0.5f);
+                rightHand.transform.DOMove(hit.transform.position, 1f);
                 //rightHand.transform.position = hit.transform.position;
             }
         //}
