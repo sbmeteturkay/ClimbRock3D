@@ -1,0 +1,35 @@
+Hi! 
+Thank you very much for downloading this asset.
+
+This asset will provide your camera a simple way to follow a target (typically a Player).
+
+If you want something more advanced, keep in mind that this is one the 3 levels of camera solutions we offer:
+- Simple Cam Follow: provides your camera a simple way to follow a target 
+- Advanced Cam Follow: (on top of previous content) supports multiple targets, gives you camera shake and a way to set Bounds
+- Cam Follow Pro: (on top of previous content), gives you the possibility of defining fluid zoom zones, and polygonal bounds, for more complex levels.
+
+In this video you have the demo scene and an explanation on how to implement the asset, summarizing visually what is written below: https://youtu.be/yODyQcdO1x4
+
+TWO WAYS OF USING THIS ASSET.
+a) you can add to your current camera the script dg_simpleFollow.cs (located in /Scripts)
+b) or you can replace your current camera with the prefab, located in /Prefabs
+
+Once you have the script attached, remember to tell who (or what) it should follow, dragging the target to the "Target" variable.
+Then you can experiment with its variables, even in play mode:
+- Laziness (float): How slowly the camera will follow the target. The slower this value, the more centered in screen the target will stay, and camera will follow every move the target does. The highest this value is, the less the target will remain in the center of screen, and the camera will let the target move more freely.
+- Look at target (bool): Camera will tilt to look at the target, displaying it always on the center. If you combine this option with a high "laziness", the result will be a lot of rotation. (Try it, it's interesting)
+- General offset (Vector3): How close/far, or left/right, or up/down should the camera be in relation with the target.
+- Take offset from initial pos (bool): If this is checked, it will automatically set the offset at the start to match the distance between camera and target. Useful for matching the game view when stopped with the game view when playing. 
+
+
+DEMO SCENE.
+This asset contains a demo scene that showcases its possibilities.
+To run it, just go to /Demo/Scenes folder, and double-click the scene inside and press play.
+
+__________________________________________
+
+If you need my assistance regarding this asset, feel free to contact me:
+E-mail: info@pipasjourney.com
+Whatsapp: +5492614182648
+
+Damián González
