@@ -7,6 +7,7 @@ public class PlayerActions : MonoBehaviour
     // Start is called before the first frame update
     public static PlayerActions Instance;
     public GameObject hand;
+    public UIManager manager;
     PlayerActions(){
         Debug.Log("deneme");
 }
@@ -35,5 +36,6 @@ public class PlayerActions : MonoBehaviour
     public void ReleaseHand()
     {
         Destroy(hand.GetComponent<ConfigurableJoint>());
+        manager.OpenFailedPanel();
     }
 }

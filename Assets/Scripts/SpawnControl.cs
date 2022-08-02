@@ -40,7 +40,7 @@ public class SpawnControl : MonoBehaviour
     {
             newSpawnPositon.y = handleYpositionGap/2+ startPoint.position.y + currentHandleIndex * handleYpositionGap;
             newSpawnPositon.x = Random.Range(xLimitLeft, xLimitRight);
-            lastSpawnedObstacle = Instantiate(obstaclesPrefabs[Random.Range(0, handlePrefabs.Length)], gameObject.transform);
+            lastSpawnedObstacle = Instantiate(obstaclesPrefabs[Random.Range(0, obstaclesPrefabs.Length)], gameObject.transform);
             lastSpawnedObstacle.transform.position = newSpawnPositon;
             obstacles.Add(lastSpawnedObstacle);
     }
