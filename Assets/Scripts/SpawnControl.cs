@@ -22,7 +22,7 @@ public class SpawnControl : MonoBehaviour
         SpawnHandles(100);
     }
 
-    // Update is called once per frame
+    // REPLACE SPAWN MECHANIC WITH OBJECT POOLING
     private void SpawnHandles(int index)
     {
         for (int i = 0; i < index; i++)

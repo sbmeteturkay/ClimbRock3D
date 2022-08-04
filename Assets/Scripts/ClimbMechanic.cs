@@ -9,7 +9,6 @@ public class ClimbMechanic : MonoBehaviour
     public GameObject parentPlayer,rightHand, leftHand;
     private FixedJoint rightJoint, leftJoint;
     public Rigidbody[] Rigidbodies;
-    public static int currentHandleIndex = 0;
     void Start()
     {
         cameraMain = Camera.main;
@@ -29,7 +28,8 @@ public class ClimbMechanic : MonoBehaviour
                 if (hit.transform.gameObject.tag == "Handle")
                 {
                     AttachHandle(hit);
-                    currentHandleIndex++;
+                    GameManager.SetScore(GameManager.GetScore() + 1);
+                    UIManager.Instance.UpdateScoreText();
                 }
             }
         }
@@ -38,46 +38,18 @@ public class ClimbMechanic : MonoBehaviour
     }
     private void AttachHandle(RaycastHit hit)
     {
-        //CloseRigidbodys();
-        //  CloseRigidbodyRotations();
-        //rightHand.transform.position = hit.transform.position;
-        //if(Random.Range(0, 2)!=0){
             if (rightJoint != null)
             {
-               // rightJoint.connectedBody = hit.transform.gameObject.GetComponent<Rigidbody>();
                 rightHand.transform.DOMove(hit.transform.position, 1f);
 
             }
             else
             {
-             //   rightHand.AddComponent<FixedJoint>().connectedBody = hit.transform.gameObject.GetComponent<Rigidbody>();
                 rightJoint = rightHand.GetComponent<FixedJoint>();
                 rightHand.transform.DOMove(hit.transform.position, 1f);
-                //rightHand.transform.position = hit.transform.position;
             }
-        //}
-        //else
-        //{
-        //    if (leftJoint != null)
-        //    {
-        //        leftJoint.connectedBody = hit.transform.gameObject.GetComponent<Rigidbody>();
-        //        leftHand.transform.DOMove(hit.transform.position, 0.5f);
-
-        //    }
-        //    else
-        //    {
-        //        leftHand.AddComponent<FixedJoint>().connectedBody = hit.transform.gameObject.GetComponent<Rigidbody>();
-        //        leftJoint = leftHand.GetComponent<FixedJoint>();
-        //        leftHand.transform.DOMove(hit.transform.position, 0.5f);
-        //        //rightHand.transform.position = hit.transform.position;
-        //    }
-        //}
-
-        
-        //OpenRigidbodys();
-        //OpenRigidbodyRotations();
     }
-    
+    #region Unused
     private void CloseRigidbodys() {
         foreach (Rigidbody rb in Rigidbodies)
         {
@@ -117,4 +89,5 @@ public class ClimbMechanic : MonoBehaviour
     //    yield return new WaitForSeconds(0.5f);
     //    objTr.localScale /= 1.2f;
     //}
+    #endregion
 }

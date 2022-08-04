@@ -6,8 +6,8 @@ public class SceneManager : MonoBehaviour
 {
 
     // Start is called before the first frame update
-   /* public void RestartScene()
+    public void RestartScene()
     {
-        SceneManager.load
-    }*/
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    }
 }
