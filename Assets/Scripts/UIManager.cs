@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateScoreText()
     {
-        score.text = GameManager.GetScore().ToString();
+        score.text = "Score: "+GameManager.GetScore().ToString();
         scoreFinal.text = score.text;
     }
 }

@@ -30,6 +30,7 @@ public class ClimbMechanic : MonoBehaviour
                     AttachHandle(hit);
                     GameManager.SetScore(GameManager.GetScore() + 1);
                     UIManager.Instance.UpdateScoreText();
+                    SoundManager.Instance.Play(SoundManager.Sounds.collect);
                 }
             }
         }
