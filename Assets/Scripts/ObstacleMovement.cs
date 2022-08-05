@@ -9,11 +9,13 @@ public class ObstacleMovement : MonoBehaviour
     public float speed = 1f;
     [Header("Linear Movement")]
     public bool linearMovement = false;
-    public float linearSpeed = 2f;
+    float linearSpeed = 1f;
+    public static float startLinearSpeed=1;
     static Vector3[] wayPoints;
     // Start is called before the first frame update
     void Start()
     {
+        linearSpeed = startLinearSpeed;
         if (wayPoints== null)
         {
             wayPoints = new Vector3[3];
@@ -28,7 +30,7 @@ public class ObstacleMovement : MonoBehaviour
         }
         if (linearMovement)
         {
-            transform.DOLocalPath(wayPoints, 2f/linearSpeed).SetRelative(true).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
+            transform.DOLocalPath(wayPoints, 1/linearSpeed).SetRelative(true).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
         }
     }
 }

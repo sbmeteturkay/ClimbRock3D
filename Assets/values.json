@@ -1,0 +1,14 @@
+{
+  "values": [
+    {
+      "obstacleLinearStartSpeed": "2",
+      "handlePositionGap": "6",
+      "climbSpeed": "1"
+    },
+    {
+      "obstacleLinearStartSpeed": "5",
+      "handlePositionGap": "4",
+      "climbSpeed": "1"
+    }
+  ]
+}

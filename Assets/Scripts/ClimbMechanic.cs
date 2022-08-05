@@ -4,18 +4,18 @@ using UnityEngine;
 using DG.Tweening;
 public class ClimbMechanic : MonoBehaviour
 {
-    // Start is called before the first frame update
     private Camera cameraMain;
     public GameObject parentPlayer,rightHand, leftHand;
     private FixedJoint rightJoint, leftJoint;
     public Rigidbody[] Rigidbodies;
+    float currentHandleY,maxHandleY;
+    [HideInInspector]
+    public float climbSpeed = 1;
     void Start()
     {
         cameraMain = Camera.main;
         Rigidbodies = parentPlayer.GetComponentsInChildren<Rigidbody>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -27,10 +27,17 @@ public class ClimbMechanic : MonoBehaviour
                 //Debug.Log("You selected the " + hit.transform.name); // ensure you picked right object
                 if (hit.transform.gameObject.tag == "Handle")
                 {
+                    currentHandleY = hit.transform.position.y;
+                    if (currentHandleY> maxHandleY)
+                    {
+                        maxHandleY = currentHandleY;
+                        GameManager.SetScore(GameManager.GetScore() + 1);
+                        UIManager.Instance.UpdateScoreText();
+                        
+                    }
                     AttachHandle(hit);
-                    GameManager.SetScore(GameManager.GetScore() + 1);
-                    UIManager.Instance.UpdateScoreText();
                     SoundManager.Instance.Play(SoundManager.Sounds.collect);
+
                 }
             }
         }
@@ -41,13 +48,13 @@ public class ClimbMechanic : MonoBehaviour
     {
             if (rightJoint != null)
             {
-                rightHand.transform.DOMove(hit.transform.position, 1f);
+                rightHand.transform.DOMove(hit.transform.position, climbSpeed);
 
             }
             else
             {
                 rightJoint = rightHand.GetComponent<FixedJoint>();
-                rightHand.transform.DOMove(hit.transform.position, 1f);
+                rightHand.transform.DOMove(hit.transform.position, climbSpeed);
             }
     }
     #region Unused

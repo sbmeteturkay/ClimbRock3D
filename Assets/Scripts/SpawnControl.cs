@@ -7,7 +7,7 @@ public class SpawnControl : MonoBehaviour
     [SerializeField] private GameObject[] handlePrefabs;
     [SerializeField] private GameObject[] obstaclesPrefabs;
     [SerializeField] private Transform startPoint;
-    [SerializeField] private float handleYpositionGap = 0.5f;
+    public float handleYpositionGap = 0.5f;
     [SerializeField] private float xLimitLeft,xLimitRight = 0.5f;
     List<GameObject> handles,obstacles;
     int currentHandleIndex=0;
@@ -16,13 +16,12 @@ public class SpawnControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startPoint = transform;
         handles= new List<GameObject>();
         obstacles= new List<GameObject>();
-        SpawnHandles(100);
+        SpawnHandles(20);
     }
 
-    // REPLACE SPAWN MECHANIC WITH OBJECT POOLING
+    // @@@@@@@-------REPLACE SPAWN MECHANIC WITH OBJECT POOLING-------@@@@@@@@@@@
     private void SpawnHandles(int index)
     {
         for (int i = 0; i < index; i++)
