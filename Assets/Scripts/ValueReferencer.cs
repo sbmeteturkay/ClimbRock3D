@@ -20,7 +20,7 @@ public class ValueReferencer : MonoBehaviour
     public ClimbMechanic climbMechanic;
     public LevelList values=new LevelList();
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         int level = GameManager.level;
         values = JsonUtility.FromJson<LevelList>(valuesJson.text);

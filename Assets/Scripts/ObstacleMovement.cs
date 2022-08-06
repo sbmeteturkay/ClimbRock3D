@@ -30,7 +30,7 @@ public class ObstacleMovement : MonoBehaviour
         }
         if (linearMovement)
         {
-            transform.DOLocalPath(wayPoints, 1/linearSpeed).SetRelative(true).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
+            transform.DOLocalPath(wayPoints, 10/linearSpeed).SetRelative(true).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
         }
     }
 }

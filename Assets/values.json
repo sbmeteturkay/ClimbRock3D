@@ -1,8 +1,8 @@
 {
   "values": [
     {
-      "obstacleLinearStartSpeed": "2",
-      "handlePositionGap": "6",
+      "obstacleLinearStartSpeed": "3",
+      "handlePositionGap": "7",
       "climbSpeed": "1"
     },
     {
