@@ -19,9 +19,9 @@ public class ObstacleMovement : MonoBehaviour
         if (wayPoints== null)
         {
             wayPoints = new Vector3[3];
-            wayPoints.SetValue(new Vector3(2.4f, 0), 1);
-            wayPoints.SetValue(new Vector3(0, 0), 0);
-            wayPoints.SetValue(new Vector3(-2.4f, 0), 2);
+            wayPoints.SetValue(new Vector3(transform.localPosition.x+2.6f, 0), 0);
+            //wayPoints.SetValue(new Vector3(transform.localPosition.x,0,transform.localPosition.z),0);
+            wayPoints.SetValue(new Vector3(transform.localPosition.x-2.6f, 0), 1);
         }
         if (turn)
         {
@@ -30,7 +30,7 @@ public class ObstacleMovement : MonoBehaviour
         }
         if (linearMovement)
         {
-            transform.DOLocalPath(wayPoints, 10/linearSpeed).SetRelative(true).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
+            transform.DOLocalPath(wayPoints, 10/linearSpeed).SetRelative(true).SetEase(Ease.Linear).SetLoops(-1, LoopType.Restart);
         }
     }
 }

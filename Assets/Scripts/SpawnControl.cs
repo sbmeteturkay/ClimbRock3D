@@ -8,7 +8,8 @@ public class SpawnControl : MonoBehaviour
     [SerializeField] private GameObject[] obstaclesPrefabs;
     [SerializeField] private Transform startPoint;
     public float handleYpositionGap = 0.5f;
-    [SerializeField] private float xLimitLeft,xLimitRight = 0.5f;
+    [Header("Spawn positions")]
+    [SerializeField] private float handleXLimitLeft, handleXLimitRight,obstacleXLimitLeft, obstacleXLimitRight = 0.5f;
     List<GameObject> handles,obstacles;
     int currentHandleIndex=0;
     Vector3 newSpawnPositon;
@@ -27,7 +28,7 @@ public class SpawnControl : MonoBehaviour
         for (int i = 0; i < index; i++)
         {
             newSpawnPositon.y = startPoint.position.y + currentHandleIndex * handleYpositionGap;
-            newSpawnPositon.x = Random.Range(xLimitLeft, xLimitRight);
+            newSpawnPositon.x = Random.Range(handleXLimitLeft, handleXLimitRight);
             lastSpawnedHandle = Instantiate(handlePrefabs[Random.Range(0, handlePrefabs.Length)], gameObject.transform);
             lastSpawnedHandle.transform.position=newSpawnPositon;
             handles.Add(lastSpawnedHandle);
@@ -38,7 +39,7 @@ public class SpawnControl : MonoBehaviour
     private void SpawnObstacles()
     {
             newSpawnPositon.y = handleYpositionGap/2+ startPoint.position.y + currentHandleIndex * handleYpositionGap;
-            newSpawnPositon.x = Random.Range(xLimitLeft, xLimitRight);
+            newSpawnPositon.x = Random.Range(obstacleXLimitLeft, obstacleXLimitRight);
             lastSpawnedObstacle = Instantiate(obstaclesPrefabs[Random.Range(0, obstaclesPrefabs.Length)], gameObject.transform);
             lastSpawnedObstacle.transform.position = newSpawnPositon;
             obstacles.Add(lastSpawnedObstacle);
