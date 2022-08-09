@@ -36,8 +36,13 @@ public class ClimbMechanic : MonoBehaviour
                         
                     }
                     AttachHandle(hit);
-                    SoundManager.Instance.Play(SoundManager.Sounds.collect);
-
+                    SoundManager.Instance.Play(SoundManager.Sounds.handle);
+                    if (hit.transform.gameObject.name == "FinalHandle")
+                    {
+                        UIManager.Instance.winEvents.Invoke();
+                        SoundManager.Instance.Play(SoundManager.Sounds.win);
+                        SoundManager.Instance.Play(SoundManager.Sounds.firework);
+                    }
                 }
             }
         }

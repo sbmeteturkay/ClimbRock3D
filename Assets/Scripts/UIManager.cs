@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject failed;
     [Header ("Trigger when player failed")]
     public UnityEvent failEvents;
+    [Header("Trigger when player win")]
+    public UnityEvent winEvents;
     [Header("In game ui references")]
     [SerializeField] TMP_Text score;
     [SerializeField] TMP_Text scoreFinal;

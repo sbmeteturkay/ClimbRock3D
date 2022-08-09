@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
 	//@@@TAKEN FROM:https://www.daggerhartlab.com/unity-audio-and-sound-manager-singleton-script/
-	//Improved with enum call
+	//Improved with enum call by: sbmeteturkay
 
 	// Audio players components.
 	public AudioSource EffectsSource;
@@ -17,13 +17,14 @@ public class SoundManager : MonoBehaviour
 	public static SoundManager Instance = null;
 	// Initialize the singleton instance.
 
-	[Tooltip("0-collect,1-die,2-win")]
+	[Tooltip("0-hadnle,1-die,2-win,firework")]
 	public AudioClip[] audioClips;
 	public enum Sounds
 	{
-		collect,
+		handle,
 		die,
-		win
+		win,
+		firework
 	}
 	private void Awake()
 	{
