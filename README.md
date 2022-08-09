@@ -5,25 +5,25 @@ You must reach top of the mountain to get to the next level while avoiding obsta
 
 If you want to know about more for creating content with it you can read instructions.txt
 
-##In game screenshots
+## In game screenshots
 
 ![image](https://user-images.githubusercontent.com/44952253/183712163-2b4abcd3-dd38-4bef-ac29-9d5772ab4db6.png)
 
 ![image](https://user-images.githubusercontent.com/44952253/183712297-3868f771-b38f-44c5-9c0d-bace109a4b2e.png)
 
-##Game flow diagram
+## Game flow diagram
 
 ![Başlıksız Diyagram drawio (2)](https://user-images.githubusercontent.com/44952253/183711446-9306e934-ed54-46c8-a4c0-69d44198ead6.png)
 
-##User input diagram
+## User input diagram
 
 ![Başlıksız Diyagram drawio (1)](https://user-images.githubusercontent.com/44952253/183711542-c0e3df87-03cf-4ca0-a295-32dce85e3ec9.png)
 
-##Class structure
+## Class structure
 
 ![Başlıksız Diyagram drawio (4)](https://user-images.githubusercontent.com/44952253/183711322-e052d055-dbe3-4679-99b8-bf0e285ac507.png)
 
-##instructions
+## instructions
 ```
 you can edit player launch speed, linearSawSpeed, handlePositionGap by values.json file.
 you need to create new value in json for every level. example
@@ -57,7 +57,7 @@ Add your obstacle a collider, and change tag to the "Obstacle". Thats it. You ca
 Add your handle a collider and rigidbody with freezed position and location, and make it kinematic. Tag it "Handle".
 
 ```
-###used assets from assetstore
+### used assets from assetstore
 
 https://assetstore.unity.com/packages/2d/gui/icons/flat-icoon-ui-2d-puzzle-game-ui-69370
 https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488
