@@ -20,3 +20,11 @@ you can add new objects from Prefabs file. This file has all handles and Obstacl
 you can extend the level by changing Environment<TopGround y position in scene.  You should add more handles so player can reach finish handle.
 ground has start position objects. if you want to adjust them its on Environment<Ground.
 if you want to edit saw speeds by per object you must select object and in ObstacleMovement, set true SetSpeedOn value and set speed.
+
+You should add your level to build scenes from build settings.
+
+**OBSTACLE CREATION**
+Add your obstacle a collider, and change tag to the "Obstacle". Thats it. You can add add movement to it with ObstacleMovement script.
+
+**HANDLE CREATION**
+Add your handle a collider and rigidbody with freezed position and location, and make it kinematic. Tag it "Handle".
