@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerActions : MonoBehaviour
 {
     [SerializeField] GameObject hand;
-    [SerializeField] UIManager manager;
     CharacterJoint[] joints;
     void Start()
     {
@@ -22,7 +21,6 @@ public class PlayerActions : MonoBehaviour
     {
         //Release players grabbing hand to fall of
         Destroy(hand.GetComponent<ConfigurableJoint>());
-        manager.OpenFailedPanel();
     }
 
 }

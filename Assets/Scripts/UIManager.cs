@@ -6,7 +6,6 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
-    [SerializeField] GameObject failed;
     [Header ("Trigger when player failed")]
     public UnityEvent failEvents;
     [Header("Trigger when player win")]
@@ -15,10 +14,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] TMP_Text score;
     [SerializeField] TMP_Text scoreFinal;
     // Start is called before the first frame update
-    public void OpenFailedPanel()
-    {
-        failed.SetActive(true);
-    }
     private void Start()
     {
         #region Singleton

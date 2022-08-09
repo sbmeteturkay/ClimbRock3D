@@ -5,7 +5,7 @@ using DG.Tweening;
 public class ClimbMechanic : MonoBehaviour
 {
     private Camera cameraMain;
-    public GameObject parentPlayer,rightHand, leftHand;
+    [SerializeField] GameObject parentPlayer,rightHand, leftHand;
     private FixedJoint rightJoint, leftJoint;
     public Rigidbody[] Rigidbodies;
     float currentHandleY,maxHandleY;

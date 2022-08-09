@@ -12,6 +12,13 @@ public class SceneManager : MonoBehaviour
     }
     public void NextScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex+1);
+        if (UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings != UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        }
     }
 }

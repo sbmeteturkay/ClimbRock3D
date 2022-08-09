@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class ValueReferencer : MonoBehaviour
 {
+    [SerializeField] bool getDataFromJSON=true;
     public TextAsset valuesJson;
     [System.Serializable]
     public class Values
@@ -23,11 +24,14 @@ public class ValueReferencer : MonoBehaviour
     void Awake()
     {
         int level = GameManager.level;
-        values = JsonUtility.FromJson<LevelList>(valuesJson.text);
-        Debug.Log(values.values[0]);
-        spawnControl.handleYpositionGap = values.values[level].handlePositionGap;
-        climbMechanic.climbSpeed = values.values[level].climbSpeed;
-        ObstacleMovement.startLinearSpeed = values.values[level].obstacleLinearStartSpeed;
+        if (getDataFromJSON)
+        {
+            values = JsonUtility.FromJson<LevelList>(valuesJson.text);
+            Debug.Log(values.values[0]);
+            spawnControl.handleYpositionGap = values.values[level].handlePositionGap;
+            climbMechanic.climbSpeed = values.values[level].climbSpeed;
+            ObstacleMovement.startLinearSpeed = values.values[level].obstacleLinearStartSpeed;
+        }
     }
 
 }

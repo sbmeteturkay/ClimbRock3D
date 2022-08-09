@@ -5,22 +5,23 @@ using DG.Tweening;
 public class ObstacleMovement : MonoBehaviour
 {
     [Header("Turn Around")]
-    public bool turn = false;
-    public float speed = 1f;
+    [SerializeField] bool turn = false;
+    [SerializeField] float speed = 1f;
     [Header("Linear Movement")]
-    public bool linearMovement = false;
+    [SerializeField] bool linearMovement = false;
     float linearSpeed = 1f;
     public static float startLinearSpeed=1;
     static Vector3[] wayPoints;
+    [SerializeField] bool setSpeedOwn = false;
     // Start is called before the first frame update
     void Start()
     {
-        linearSpeed = startLinearSpeed;
+        if(!setSpeedOwn)
+            linearSpeed = startLinearSpeed;
         if (wayPoints== null)
         {
             wayPoints = new Vector3[3];
             wayPoints.SetValue(new Vector3(transform.localPosition.x+2.6f, 0), 0);
-            //wayPoints.SetValue(new Vector3(transform.localPosition.x,0,transform.localPosition.z),0);
             wayPoints.SetValue(new Vector3(transform.localPosition.x-2.6f, 0), 1);
         }
         if (turn)

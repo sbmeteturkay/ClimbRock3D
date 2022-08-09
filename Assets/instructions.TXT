@@ -1,0 +1,22 @@
+you can edit player launch speed, linearSawSpeed, handlePositionGap by values.json file.
+you need to create new value in json for every level. example
+   
+   {
+      "obstacleLinearStartSpeed": "5",
+      "handlePositionGap": "4",
+      "climbSpeed": "1"
+    }
+
+
+linearSawSpeed= linear moving red saw speed
+handle position gap= unused for now. it was created for porductive level generator.
+climb speed= player launch speed to an handle to handle
+
+
+**LEVEL CREATION**
+you can duplicate level02 scene by CTRL+D to create a level. level02 has all handles and obstacles in it.
+you can change positioning of nahdles&obstacles in Environment<HANDLES. All wall objects are here.
+you can add new objects from Prefabs file. This file has all handles and Obstacle prefabs.
+you can extend the level by changing Environment<TopGround y position in scene.  You should add more handles so player can reach finish handle.
+ground has start position objects. if you want to adjust them its on Environment<Ground.
+if you want to edit saw speeds by per object you must select object and in ObstacleMovement, set true SetSpeedOn value and set speed.
