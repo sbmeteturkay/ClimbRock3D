@@ -23,6 +23,10 @@ If you want to know about more for creating content with it you can read instruc
 
 ![Başlıksız Diyagram drawio (4)](https://user-images.githubusercontent.com/44952253/183711322-e052d055-dbe3-4679-99b8-bf0e285ac507.png)
 
+*instructions*
+[instructions.TXT](https://github.com/sbmeteturkay/ClimbRock3D/files/9295090/instructions.TXT)
+
+
 used assets from assetstore
 
 https://assetstore.unity.com/packages/2d/gui/icons/flat-icoon-ui-2d-puzzle-game-ui-69370
