@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8159553202891775754}
   - component: {fileID: 8159553202891775755}
   m_Layer: 0
-  m_Name: Handle
+  m_Name: Gem
   m_TagString: Handle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

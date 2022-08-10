@@ -28,3 +28,9 @@ Add your obstacle a collider, and change tag to the "Obstacle". Thats it. You ca
 
 **HANDLE CREATION**
 Add your handle a collider and rigidbody with freezed position and location, and make it kinematic. Tag it "Handle".
+
+
+*UI manager*
+UI manager has fail events and win events, you can add new functions to it if you want to do more.
+*Sound Manager*
+if you want to add new sound, go to sound manager and add a new enum element into the Sounds enum objects. Then you need to reference audio sound from scene 1. You can call it from anywhere with instance by SoundManager.instance.Play(Sounds sound).
