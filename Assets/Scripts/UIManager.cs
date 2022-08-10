@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
     [Header("In game ui references")]
     [SerializeField] TMP_Text score;
     [SerializeField] TMP_Text scoreFinal;
+    [SerializeField] TMP_Text gem;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -26,11 +28,15 @@ public class UIManager : MonoBehaviour
             Instance = this;
         }
         #endregion
-
+        UpdateGemText();
     }
     public void UpdateScoreText()
     {
         score.text = "Score: "+GameManager.GetScore().ToString();
         scoreFinal.text = score.text;
+    }
+    public void UpdateGemText()
+    {
+        gem.text = GameManager.GetGem().ToString();
     }
 }

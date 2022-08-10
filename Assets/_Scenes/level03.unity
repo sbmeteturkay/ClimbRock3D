@@ -157,7 +157,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &13258203
 MonoBehaviour:
@@ -861,7 +861,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &243752071 stripped
 Transform:
@@ -1329,7 +1329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8159553202891775753, guid: fb1c3df53dbe0e44a94c8732df3f9c2b, type: 3}
       propertyPath: m_Name
-      value: Handle
+      value: Gem
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb1c3df53dbe0e44a94c8732df3f9c2b, type: 3}
@@ -1820,7 +1820,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &755258708
 PrefabInstance:
@@ -2552,7 +2552,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1003487616 stripped
 Transform:
@@ -2600,7 +2600,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1021453778
 PrefabInstance:
@@ -2993,7 +2993,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1300823633
 MonoBehaviour:
@@ -3447,7 +3447,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1521497152
 PrefabInstance:
@@ -3851,6 +3851,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7647570592588667253, guid: 1bd529053a4441441a55ea49e6511a4a, type: 3}
   m_PrefabInstance: {fileID: 1621718783}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1621718788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6075188528909016381, guid: 1bd529053a4441441a55ea49e6511a4a, type: 3}
+  m_PrefabInstance: {fileID: 1621718783}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1666289507 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8159553202891775752, guid: 65a86e95b8ce8a747923ac1fba51ca7f, type: 3}
@@ -4169,7 +4180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8159553202891775753, guid: fb1c3df53dbe0e44a94c8732df3f9c2b, type: 3}
       propertyPath: m_Name
-      value: Handle
+      value: Gem
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb1c3df53dbe0e44a94c8732df3f9c2b, type: 3}
@@ -5170,6 +5181,7 @@ MonoBehaviour:
         m_CallState: 2
   score: {fileID: 1621718785}
   scoreFinal: {fileID: 1621718784}
+  gem: {fileID: 1621718788}
 --- !u!4 &2146954561
 Transform:
   m_ObjectHideFlags: 0
@@ -5182,7 +5194,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &89191437505493961
 PrefabInstance:

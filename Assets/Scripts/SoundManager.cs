@@ -17,14 +17,15 @@ public class SoundManager : MonoBehaviour
 	public static SoundManager Instance = null;
 	// Initialize the singleton instance.
 
-	[Tooltip("0-hadnle,1-die,2-win,firework")]
+	[Tooltip("0-hadnle,1-die,2-win,3-firework,4-gem")]
 	public AudioClip[] audioClips;
 	public enum Sounds
 	{
 		handle,
 		die,
 		win,
-		firework
+		firework,
+		gem
 	}
 	private void Awake()
 	{
@@ -54,9 +55,14 @@ public class SoundManager : MonoBehaviour
 		MusicSource.clip = clip;
 		MusicSource.Play();
 	}
-	public void Play(Sounds sound)
+	public void Play(Sounds sound,bool pitchRandom=false)
     {
 		EffectsSource.clip = audioClips[(int)sound];
+        if (pitchRandom)
+        {
+			float randomPitch = Random.Range(LowPitchRange, HighPitchRange);
+			EffectsSource.pitch = randomPitch;
+		}
 		EffectsSource.Play();
 	}
 	// Play a random clip from an array, and randomize the pitch slightly.

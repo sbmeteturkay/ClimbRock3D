@@ -36,18 +36,27 @@ public class ClimbMechanic : MonoBehaviour
                         
                     }
                     AttachHandle(hit);
-                    SoundManager.Instance.Play(SoundManager.Sounds.handle);
+                    SoundManager.Instance.Play(SoundManager.Sounds.handle,true);
                     if (hit.transform.gameObject.name == "FinalHandle")
                     {
-                        UIManager.Instance.winEvents.Invoke();
-                        SoundManager.Instance.Play(SoundManager.Sounds.win);
-                        SoundManager.Instance.Play(SoundManager.Sounds.firework);
+                        FinishHandle();
+                    }
+                    if (hit.transform.name == "Gem")
+                    {
+                       GameManager.GemCollect();
                     }
                 }
             }
         }
 
         
+    }
+
+    void FinishHandle()
+    {
+        UIManager.Instance.winEvents.Invoke();
+        SoundManager.Instance.Play(SoundManager.Sounds.win);
+        SoundManager.Instance.Play(SoundManager.Sounds.firework);
     }
     private void AttachHandle(RaycastHit hit)
     {

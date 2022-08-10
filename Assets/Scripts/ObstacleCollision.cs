@@ -12,6 +12,6 @@ public class ObstacleCollision : MonoBehaviour
          other.attachedRigidbody.AddExplosionForce(50, transform.position, 50f, 70f, ForceMode.Impulse);
         //invoke fail events if player hits obstacle
         UIManager.Instance.failEvents.Invoke();
-        SoundManager.Instance.Play(SoundManager.Sounds.die);
+        SoundManager.Instance.Play(SoundManager.Sounds.die,true);
     }
 }

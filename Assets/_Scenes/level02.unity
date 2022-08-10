@@ -157,7 +157,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &13258203
 MonoBehaviour:
@@ -737,7 +737,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &243752071 stripped
 Transform:
@@ -797,7 +797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8159553202891775753, guid: fb1c3df53dbe0e44a94c8732df3f9c2b, type: 3}
       propertyPath: m_Name
-      value: Handle
+      value: Gem
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb1c3df53dbe0e44a94c8732df3f9c2b, type: 3}
@@ -1396,7 +1396,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &755258708
 PrefabInstance:
@@ -1808,7 +1808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 799947267}
-  manager: {fileID: 2146954560}
 --- !u!1001 &914274555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2171,7 +2170,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1006238451
 GameObject:
@@ -2214,7 +2213,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1021453778
 PrefabInstance:
@@ -2545,7 +2544,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1300823633
 MonoBehaviour:
@@ -2559,6 +2558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df8f8ae618864749a7b83f262405134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  getDataFromJSON: 1
   valuesJson: {fileID: 4900000, guid: 0eaf56017524dc74ba76e6ee3e8cad74, type: 3}
   spawnControl: {fileID: 1001847006}
   climbMechanic: {fileID: 1509040976}
@@ -3002,29 +3002,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7752796771608322856, guid: b59a2d4c092ebf74fb53b6a16d34b13e, type: 3}
   m_PrefabInstance: {fileID: 2132694061}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1430286472 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8159553202891775753, guid: fb1c3df53dbe0e44a94c8732df3f9c2b, type: 3}
-  m_PrefabInstance: {fileID: 298600089}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1430286473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430286472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0.6556604, g: 0.9741621, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!4 &1430286477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8159553202891775752, guid: fb1c3df53dbe0e44a94c8732df3f9c2b, type: 3}
@@ -3145,7 +3122,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1521497152
 PrefabInstance:
@@ -3380,6 +3357,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6075188529187385265, guid: 1bd529053a4441441a55ea49e6511a4a, type: 3}
   m_PrefabInstance: {fileID: 1550718706}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1550718712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6075188528909016381, guid: 1bd529053a4441441a55ea49e6511a4a, type: 3}
+  m_PrefabInstance: {fileID: 1550718706}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1564775488 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8159553202891775752, guid: fb1c3df53dbe0e44a94c8732df3f9c2b, type: 3}
@@ -4865,6 +4853,7 @@ MonoBehaviour:
         m_CallState: 2
   score: {fileID: 1550718708}
   scoreFinal: {fileID: 1550718707}
+  gem: {fileID: 1550718712}
 --- !u!4 &2146954561
 Transform:
   m_ObjectHideFlags: 0
@@ -4877,7 +4866,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &89191437505493961
 PrefabInstance:
